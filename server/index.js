@@ -32,4 +32,19 @@ app.get("/", (req, res)=>{
     })
 })
 
+
+app.post("/", (req, rest)=>{
+    data.push({
+        id: 4,
+        title:"reservacion4",
+        descripcion: "Quiero una reservacion en area de bar",
+        comensales: 8,
+    })
+
+    res.json({
+        msg:"Reservacion agregada",
+        data: data
+    })
+})
+
 app.listen(3005, ()=>console.log("servidor encendido"))
