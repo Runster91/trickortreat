@@ -14,56 +14,157 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  width: 100%;
   min-height: 100vh;
+  flex-direction: column;
+  
+}
+
+header{
+  display: flex;
+  
+  background-color: white;
+  color: tomato;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1em, solid, red;
+}
+
+main{
+  background-color: #ee9209;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+ul{
+  list-style: none;
+}
+
+.cho{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1em;
+  flex-direction: column; 
+  font-weight: 5em;
+}
+
+.sm{
+  border-radius: 90px;
+  padding: 1em;
+  height: 12em;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  display: flex;
+  text-align: center;
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 40px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #f30808;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #ee9209;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 15px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.dork{
+  padding: 4em;
+  background-color: black ;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.roi{
+  background-color: #f30808;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ort{
+  width: 45em;
+  height: 40em;
+  padding: 2em;
+
+}
+.udf{
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#root{
+  background: rgb(27, 26, 26);
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  
+}
+
+@media screen and (max-width: 800px)  {
+  body{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    
   }
-  a:hover {
-    color: #747bff;
+
+  header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  button {
-    background-color: #f9f9f9;
+  .roi{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  .dork{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  .ort{
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+    height: fit-content;
+  }
+  .cho{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #root{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
