@@ -1,15 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import App from './assets/components/Reservations'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-     <p>Hola Mundo</p>
-    </>
+    <div>
+      <Reservation.jsx/>
+    </div>
   )
 }
 

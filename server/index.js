@@ -1,50 +1,54 @@
+
 import express from "express";
+import cors from "cors";
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+let data = [
+  {
+	id: 0,
+	title:"reservacion1",
+   descripcion: "Quiero una reservacion en terraza",
+   comensales: 2,
+
+  },
+  {
+	id: 1,
+       title:"reservacion2",
+       descripcion: "Quiero una reservacion en Plancha",
+       comensales: 5,
+
+  },
+];
 
 
-const app = express()
+app.get("/", (req, res) => {
+  res.json({
+	msg: "Este es un mensaje",
+	data: data,
+  });
+});
 
-const data = [{
-    id: 1,
-    title:"reservacion1",
-    descripcion: "Quiero una reservacion en terraza",
-    comensales: 2,
-},
-    {
-        id: 2,
-        title:"reservacion2",
-        descripcion: "Quiero una reservacion en Plancha",
-        comensales: 5,
-    },
+// POST - CREAR UNA RESERVACIÓN
+app.post("/", (req, res) => {
+  console.log("req", req.body);
 
-    {
-        id: 3,
-        title:"reservacion3",
-        descripcion: "Quiero una reservacion en area infantil",
-        comensales: 3,
-    }
+  const { title, description } = req.body;
 
-]
+  data.push({
+	title,
+	descripcion,
+	comensales,
+  });
 
-app.get("/", (req, res)=>{
-    res.json({
-        msg: "Este  es un  mensaje",
-        data: data
-    })
-})
+  res.json({
+	msg: "Reservación agregada",
+	data: data,
+  });
+});
 
 
-app.post("/", (req, rest)=>{
-    data.push({
-        id: 4,
-        title:"reservacion4",
-        descripcion: "Quiero una reservacion en area de bar",
-        comensales: 8,
-    })
-
-    res.json({
-        msg:"Reservacion agregada",
-        data: data
-    })
-})
-
-app.listen(3005, ()=>console.log("servidor encendido"))
+app.listen(3005, () => console.log("servidor encendido"));
