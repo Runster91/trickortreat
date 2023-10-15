@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
   });
 });
 
-// POST - CREAR UNA RESERVACIÓN
+
 app.post("/", (req, res) => {
   console.log("req", req.body);
 
