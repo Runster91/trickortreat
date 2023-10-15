@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import App from './assets/components/Reservations'
+import React from 'react';
+import Reservation from './assets/components/Reservation';
 
-function App() {
-  const [count, setCount] = useState(0)
 
+const App = () => {
   return (
     <div>
-      <Reservation.jsx/>
+      
+      <Reservation />
+      
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
