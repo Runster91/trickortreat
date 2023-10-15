@@ -10,18 +10,12 @@ app.use(express.json());
 let data = [
   {
 	id: 0,
-	title:"reservacion1",
-   descripcion: "Quiero una reservacion en terraza",
-   comensales: 2,
-
+    name: 'Runster91',
+    date: '2023-10-16',
+    time: '7:00',
+    guests: '4',
   },
-  {
-	id: 1,
-       title:"reservacion2",
-       descripcion: "Quiero una reservacion en Plancha",
-       comensales: 5,
-
-  },
+  
 ];
 
 
