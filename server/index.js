@@ -30,16 +30,17 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
   console.log("req", req.body);
 
-  const { title, description } = req.body;
+  const { name, date, time, guests } = req.body;
 
   data.push({
-	title,
-	descripcion,
-	comensales,
+	name,
+	date,
+    time,
+    guests,
   });
 
   res.json({
-	msg: "Reservación agregada",
+	msg: "Reservation added",
 	data: data,
   });
 });
